@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.projekt.app.ProjektJavaApp.AdminReviewSearch">
+    <fx:include source="adminMenuBar.fxml" />
+    <GridPane layoutX="1.0" layoutY="41.0" prefHeight="574.0" prefWidth="600.0" style="-fx-background-color: #fff0f5;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="324.79998779296875" minWidth="10.0" prefWidth="292.00001220703126" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.7999877929687" minWidth="10.0" prefWidth="296.7999877929687" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="112.5999969482422" minHeight="10.0" prefHeight="112.5999969482422" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.59998168945313" minHeight="10.0" prefHeight="65.6000030517578" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="111.80002441406253" minHeight="10.0" prefHeight="84.80001831054688" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="271.19999389648444" minHeight="10.0" prefHeight="271.19999389648444" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <Label text="Review Search" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+                <font>
+                    <Font size="32.0" />
+                </font>
+            </Label>
+            <Label text="Username: " GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <TableView fx:id="reviewTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                <columns>
+                    <TableColumn fx:id="mediaTypeTableColumn" prefWidth="99.20001530647278" text="Media Type" />
+                    <TableColumn fx:id="usernameTableColumn" prefWidth="108.79998779296875" text="Username" />
+                    <TableColumn fx:id="mediaTableColumn" prefWidth="111.99998474121094" text="Reviewed Media" />
+                    <TableColumn fx:id="commentTableColumn" prefWidth="278.39996337890625" text="Comment" />
+                </columns>
+            </TableView>
+            <Button mnemonicParsing="false" onAction="#reviewSearch" style="-fx-background-color: #b0c4de;" text="Search" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                <font>
+                    <Font size="15.0" />
+                </font></Button>
+            <TextField fx:id="usernameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets left="20.0" right="50.0" />
+                </GridPane.margin>
+            </TextField>
+         <Button mnemonicParsing="false" onAction="#mainMenu" style="-fx-background-color: #b0c4de;" text="Main Menu">
+            <font>
+               <Font size="15.0" />
+            </font>
+            <GridPane.margin>
+               <Insets bottom="80.0" />
+            </GridPane.margin>
+         </Button>
+        </children>
+    </GridPane>
+</AnchorPane>

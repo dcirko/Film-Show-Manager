@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.projekt.app.ProjektJavaApp.RemoveWatchlist">
+   <children>
+      <GridPane layoutX="-1.0" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #fff0f5;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.20001220703125" minWidth="10.0" prefWidth="300.20001220703125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.5999877929687" minWidth="10.0" prefWidth="300.5999877929687" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="111.99999084472657" minHeight="0.0" prefHeight="77.79999008178712" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="255.99997558593753" minHeight="10.0" prefHeight="213.80000991821285" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="145.2000183105469" minHeight="10.0" prefHeight="26.99998779296874" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="240.80001220703127" minHeight="10.0" prefHeight="240.80001220703127" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#backToWatchlist" style="-fx-background-color: #b0c4de;" text="Back">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label text="Remove from watchlist:" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="watchlistChoiceBox" prefWidth="150.0" style="-fx-background-color: #b0c4de;" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#removeFromWatchlist" style="-fx-background-color: #b0c4de;" text="Remove" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

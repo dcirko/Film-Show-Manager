@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.projekt.app.ProjektJavaApp.AdminBestRatedMovieAndSeries">
+    <fx:include source="adminMenuBar.fxml" />
+    <GridPane layoutY="41.0" prefHeight="558.0" prefWidth="600.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.20001220703125" minWidth="10.0" prefWidth="299.4000244140625" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="301.8000122070313" minWidth="10.0" prefWidth="300.1999755859375" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="183.00000610351563" minHeight="10.0" prefHeight="70.79999084472657" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="183.00000610351563" minHeight="10.0" prefHeight="86.8" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="162.8000061035156" minHeight="10.0" prefHeight="129.2" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="257.5999755859375" minHeight="10.0" prefHeight="84.59999389648436" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="191.00003662109373" minHeight="10.0" prefHeight="145.2" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="191.00003662109373" minHeight="10.0" prefHeight="80.40000000000003" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <Label text="Best Rated Movie:" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                <font>
+                    <Font size="35.0" />
+                </font>
+            </Label>
+            <TextArea fx:id="movieTextArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                <GridPane.margin>
+                    <Insets bottom="30.0" left="120.0" right="120.0" top="30.0" />
+                </GridPane.margin>
+            </TextArea>
+            <Label layoutX="172.0" layoutY="92.0" text="Best Rated Series:" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                <font>
+                    <Font size="35.0" />
+                </font>
+            </Label>
+            <TextArea fx:id="seriesTextArea" layoutX="130.0" layoutY="188.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                <GridPane.margin>
+                    <Insets bottom="30.0" left="120.0" right="120.0" top="30.0" />
+                </GridPane.margin>
+            </TextArea>
+         <Button mnemonicParsing="false" onAction="#mainMenu" style="-fx-background-color: #b0c4de;" text="Main Menu">
+            <font>
+               <Font size="15.0" />
+            </font>
+            <GridPane.margin>
+               <Insets bottom="33.0" />
+            </GridPane.margin>
+         </Button>
+        </children>
+    </GridPane>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.projekt.app.ProjektJavaApp.AdminMovieSearch">
+    <fx:include source="adminMenuBar.fxml" />
+    <GridPane layoutX="1.0" layoutY="40.0" prefHeight="561.0" prefWidth="600.0" style="-fx-background-color: #fff0f5;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.20001220703125" minWidth="10.0" prefWidth="299.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.6000122070312" minWidth="10.0" prefWidth="301.4" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="93.79998779296875" minHeight="10.0" prefHeight="71.99998779296875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="95.0000244140625" minHeight="10.0" prefHeight="53.60001220703124" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="113.59995117187503" minHeight="0.0" prefHeight="45.59999389648439" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="113.59995117187503" minHeight="10.0" prefHeight="57.600006103515625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="255.39999999999998" minHeight="10.0" prefHeight="247.39999999999998" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <Label text="Movie Search" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+                <font>
+                    <Font size="34.0" />
+                </font>
+            </Label>
+            <Label text="Movie name:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label text="Genre:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <TableView fx:id="movieTableView" prefHeight="228.0" prefWidth="502.0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                <columns>
+                    <TableColumn fx:id="nameTableColumn" prefWidth="115.99999845027924" text="Name" />
+                    <TableColumn fx:id="genreTableColumn" prefWidth="80.79999542236328" text="Genre" />
+                    <TableColumn fx:id="lengthTableColumn" prefWidth="53.5999755859375" text="Length" />
+                    <TableColumn fx:id="ratingTableColumn" prefWidth="50.4000244140625" text="Rating" />
+                    <TableColumn fx:id="yearTableColumn" prefWidth="49.5999755859375" text="Year" />
+                    <TableColumn fx:id="revenueTableColumn" prefWidth="75.199951171875" text="Revenue" />
+                    <TableColumn fx:id="actorTableColumn" prefWidth="178.40005493164062" text="Actor" />
+                </columns>
+            </TableView>
+            <TextField fx:id="nameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets left="20.0" right="50.0" />
+                </GridPane.margin>
+            </TextField>
+            <ComboBox fx:id="genreComboBox" prefWidth="150.0" style="-fx-background-color: #b0c4de;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <GridPane.margin>
+                    <Insets left="20.0" right="50.0" />
+                </GridPane.margin>
+            </ComboBox>
+            <Button mnemonicParsing="false" onAction="#movieSearch" style="-fx-background-color: #b0c4de;" text="Search" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                <font>
+                    <Font size="15.0" />
+                </font></Button>
+         <Button mnemonicParsing="false" onAction="#mainMenu" style="-fx-background-color: #b0c4de;" text="Main Menu">
+            <font>
+               <Font size="15.0" />
+            </font>
+            <GridPane.margin>
+               <Insets bottom="60.0" />
+            </GridPane.margin>
+         </Button>
+        </children>
+    </GridPane>
+</AnchorPane>

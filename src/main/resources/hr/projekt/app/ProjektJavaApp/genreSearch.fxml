@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.projekt.app.ProjektJavaApp.GenreSearch">
+    <fx:include source="menuBar.fxml" />
+   <GridPane layoutY="40.0" minWidth="523.0" prefHeight="560.0" prefWidth="600.0" style="-fx-background-color: #fff0f5;">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="300" minWidth="10.0" prefWidth="250.39996337890625" />
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="300" minWidth="10.0" prefWidth="249.60003662109375" />
+     </columnConstraints>
+     <rowConstraints>
+         <RowConstraints maxHeight="134.8000015258789" minHeight="10.0" prefHeight="100.80000610351563" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="134.8000015258789" minHeight="10.0" prefHeight="70.39999389648436" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="152.599951171875" minHeight="10.0" prefHeight="71.19999999999999" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="152.599951171875" minHeight="10.0" prefHeight="66.39999999999998" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="291.00001831054686" minHeight="10.0" prefHeight="251.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <Label text="Name: " GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <Label text="Description: " GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <Label prefHeight="58.0" prefWidth="202.0" text="Genre Search" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+            <font>
+               <Font size="31.0" />
+            </font>
+         </Label>
+         <TextField fx:id="nameTextField" prefHeight="26.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets left="20.0" right="60.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="descriptionTextField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets left="20.0" right="60.0" />
+            </GridPane.margin>
+         </TextField>
+         <TableView fx:id="genreTableView" prefHeight="253.0" prefWidth="446.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+           <columns>
+             <TableColumn fx:id="nameTableColumn" minWidth="0.0" prefWidth="224.0" text="Name" />
+               <TableColumn fx:id="descriptionTableColumn" minWidth="0.0" prefWidth="375.20001220703125" text="Description" />
+           </columns>
+         </TableView>
+         <Button mnemonicParsing="false" onAction="#genreSearch" style="-fx-background-color: #b0c4de;" text="Search" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <font>
+               <Font size="15.0" />
+            </font></Button>
+         <Button mnemonicParsing="false" onAction="#mainMenu" style="-fx-background-color: #b0c4de;" text="Main Menu">
+            <font>
+               <Font size="15.0" />
+            </font>
+            <GridPane.margin>
+               <Insets bottom="70.0" />
+            </GridPane.margin>
+         </Button>
+      </children>
+   </GridPane>
+</AnchorPane>

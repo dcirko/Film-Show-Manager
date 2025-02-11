@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.projekt.app.ProjektJavaApp.AddNewReviewMovie">
+    <fx:include source="menuBar.fxml" />
+   <GridPane layoutY="41.0" prefHeight="561.0" prefWidth="600.0" style="-fx-background-color: #fff0f5;">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.8" minWidth="10.0" prefWidth="280.8" />
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.999951171875" minWidth="10.0" prefWidth="284.8" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints maxHeight="148.80000762939454" minHeight="10.0" prefHeight="120.40001831054687" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="149.2" minHeight="10.0" prefHeight="85.80001831054689" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="131.80001220703127" minHeight="10.0" prefHeight="98.40001831054684" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="117.59998779296876" minHeight="10.0" prefHeight="81.5999816894531" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="169.5999816894531" minHeight="10.0" prefHeight="90.39999999999998" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <Label text="Add New Movie Review" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+            <font>
+               <Font size="32.0" />
+            </font>
+         </Label>
+         <Label prefHeight="30.0" prefWidth="218.0" text="Choose a movie to review:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <Label text="Comment: " GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <ComboBox fx:id="movieComboBox" prefWidth="150.0" style="-fx-background-color: #b0c4de;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets left="20.0" />
+            </GridPane.margin>
+         </ComboBox>
+         <TextArea fx:id="commentTextArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets bottom="10.0" left="20.0" right="30.0" top="10.0" />
+            </GridPane.margin>
+         </TextArea>
+         <Button mnemonicParsing="false" onAction="#saveReview" style="-fx-background-color: #b0c4de;" text="Save" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <font>
+               <Font size="15.0" />
+            </font></Button>
+         <Button mnemonicParsing="false" onAction="#mainMenu" style="-fx-background-color: #b0c4de;" text="Main Menu">
+            <font>
+               <Font size="15.0" />
+            </font>
+            <GridPane.margin>
+               <Insets bottom="106.0" />
+            </GridPane.margin>
+         </Button>
+      </children>
+   </GridPane>
+</AnchorPane>

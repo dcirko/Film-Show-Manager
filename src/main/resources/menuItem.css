@@ -1,0 +1,18 @@
+.menuItem:hover {
+    -fx-background-color: #808080; 
+}
+.menuItem {
+    -fx-font-weight: bold;
+   
+}
+.menuItem {
+    -fx-background-color: #808080; 
+}
+.menu{
+    -fx-background-color: #808080; 
+}
+.menuItem {
+    -fx-font-size: 14px; 
+}
+
+
